@@ -16,7 +16,7 @@ var elPeso = document.getElementById("peso");
 elPeso.innerHTML = peso;
 
 var elAltura = document.getElementById("altura");
-elAltura.innerHTML = altura;
+elAltura.innerHTML = altura.toString().replace(".", ",");
 
 var elImc = document.getElementById("imc");
-elImc.innerHTML = imc;
+elImc.innerHTML = imc.replace(".", ",");
