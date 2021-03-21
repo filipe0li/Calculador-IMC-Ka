@@ -2,7 +2,8 @@ let paciente = {
     nome: "Renato Oliveira",
     peso: 76.00,
     altura: 1.78
-}
+};
+
 mostraPaciente(paciente);
 /*
 console.log(nome);
