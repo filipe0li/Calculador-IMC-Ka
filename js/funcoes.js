@@ -1,5 +1,5 @@
 function calculaIMC(peso, altura) {
-    return (peso / altura ** 2);
+    return (peso / altura ** 2).toFixed(2);
 };
 
 function verificaIMC(imc) {
@@ -33,7 +33,7 @@ function mostraPaciente(nome, peso, altura) {
     elAltura.innerHTML = `${altura.toString().replace(".", ",")} m`;
 
     let elImc = document.getElementById("imc");
-    elImc.innerHTML = imc.replace(".", ",");
+    elImc.innerHTML = imc.toString().replace(".", ",");
 
     let elSituacao = document.getElementById("situacao");
     elSituacao.innerHTML = situacao;
