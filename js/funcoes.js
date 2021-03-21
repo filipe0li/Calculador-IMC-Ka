@@ -19,18 +19,18 @@ function verificaIMC(imc) {
     return situacao;
 };
 
-function mostraPaciente(nome, peso, altura) {
-    let imc = calculaIMC(peso, altura);
+function mostraPaciente(paciente) {
+    let imc = calculaIMC(paciente.peso, paciente.altura);
     let situacao = verificaIMC(imc);
 
     let elNome = document.getElementById("nome");
-    elNome.innerHTML = nome;
+    elNome.innerHTML = paciente.nome;
 
     let elPeso = document.getElementById("peso");
-    elPeso.innerHTML = `${peso} kg`;
+    elPeso.innerHTML = `${paciente.peso} kg`;
 
     let elAltura = document.getElementById("altura");
-    elAltura.innerHTML = `${altura.toString().replace(".", ",")} m`;
+    elAltura.innerHTML = `${paciente.altura.toString().replace(".", ",")} m`;
 
     let elImc = document.getElementById("imc");
     elImc.innerHTML = imc.toString().replace(".", ",");

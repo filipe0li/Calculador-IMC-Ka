@@ -1,7 +1,9 @@
-let nome = "Renato Oliveira";
-let peso = 76.00;
-let altura = 1.78;
-mostraPaciente(nome, peso, altura);
+let paciente = {
+    nome: "Renato Oliveira",
+    peso: 76.00,
+    altura: 1.78
+}
+mostraPaciente(paciente);
 /*
 console.log(nome);
 console.log(`Peso: ${peso} - Altura: ${altura}`);
