@@ -1,7 +1,8 @@
-var nome = "Renato Oliveira";
-var peso = 76.00;
-var altura = 1.78;
-var imc = (peso / (altura ** 2)).toFixed(2);
+let nome = "Renato Oliveira";
+let peso = 76.00;
+let altura = 1.78;
+let imc = (peso / (altura ** 2)).toFixed(2);
+let situacao = null;
 
 /*
 console.log(nome);
@@ -9,14 +10,30 @@ console.log(`Peso: ${peso} - Altura: ${altura}`);
 console.log(`Cálculo do IMC: ${imc}`); //Limita para duas casas depois da virgula.
 */
 
-var elNome = document.getElementById("nome");
+if (imc < 18.5) {
+    situacao = "Magreza";
+}
+else if (imc <= 24.9) {
+    situacao = "Normal";
+}
+else if (imc <= 30) {
+    situacao = "Sobrpeso";
+}
+else {
+    situacao = "Obesidade";
+}
+
+let elNome = document.getElementById("nome");
 elNome.innerHTML = nome;
 
-var elPeso = document.getElementById("peso");
+let elPeso = document.getElementById("peso");
 elPeso.innerHTML = peso;
 
-var elAltura = document.getElementById("altura");
+let elAltura = document.getElementById("altura");
 elAltura.innerHTML = altura.toString().replace(".", ",");
 
-var elImc = document.getElementById("imc");
+let elImc = document.getElementById("imc");
 elImc.innerHTML = imc.replace(".", ",");
+
+let elSituacao = document.getElementById("situacao");
+elSituacao.innerHTML = situacao;
