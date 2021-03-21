@@ -1,0 +1,8 @@
+span {
+    color: gray;
+    font-weight: bold;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.1);
+}
